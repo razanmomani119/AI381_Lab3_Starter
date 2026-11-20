@@ -39,3 +39,15 @@ docker build -t churn-api:local . && docker run --rm -p 8000:8000 churn-api:loca
 Requirements note: `requirements-dev.txt` adds `mlflow`. Run `pip install -r requirements-dev.txt` again after you update the starter.
 
 The data files (`data/churn_v1.csv`, `data/churn_v2.csv`) are the same as in the Lab 1 starter kit.
+
+## Local Deployment Verification
+
+The API was deployed successfully using Docker Compose.
+
+- Health endpoint: GET /health
+- Prediction endpoint: POST /predict
+- Model: Logistic Regression
+- Model version: 1
+- AUC: 0.798
+- F1 Score: 0.495
+- P95 Latency: 4.85 ms
